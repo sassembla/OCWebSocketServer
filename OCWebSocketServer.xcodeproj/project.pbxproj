@@ -17,6 +17,13 @@
 		133508671743D785009B682E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133508471743D785009B682E /* Cocoa.framework */; };
 		1335086F1743D785009B682E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1335086D1743D785009B682E /* InfoPlist.strings */; };
 		133508721743D785009B682E /* OCWebSocketServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 133508711743D785009B682E /* OCWebSocketServerTests.m */; };
+		133508811743D79A009B682E /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335087D1743D79A009B682E /* GCDAsyncSocket.m */; };
+		133508821743D79A009B682E /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335087D1743D79A009B682E /* GCDAsyncSocket.m */; };
+		133508831743D79A009B682E /* MBWebSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335087F1743D79A009B682E /* MBWebSocketServer.m */; };
+		133508841743D79A009B682E /* MBWebSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335087F1743D79A009B682E /* MBWebSocketServer.m */; };
+		133508851743D79A009B682E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 133508801743D79A009B682E /* README.md */; };
+		133508861743D79A009B682E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 133508801743D79A009B682E /* README.md */; };
+		133508891743D7DC009B682E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133508871743D7CF009B682E /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,12 @@
 		1335086E1743D785009B682E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		133508701743D785009B682E /* OCWebSocketServerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCWebSocketServerTests.h; sourceTree = "<group>"; };
 		133508711743D785009B682E /* OCWebSocketServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCWebSocketServerTests.m; sourceTree = "<group>"; };
+		1335087C1743D79A009B682E /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		1335087D1743D79A009B682E /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		1335087E1743D79A009B682E /* MBWebSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBWebSocketServer.h; sourceTree = "<group>"; };
+		1335087F1743D79A009B682E /* MBWebSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBWebSocketServer.m; sourceTree = "<group>"; };
+		133508801743D79A009B682E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		133508871743D7CF009B682E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				133508481743D785009B682E /* Cocoa.framework in Frameworks */,
+				133508891743D7DC009B682E /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +89,7 @@
 		1335083B1743D784009B682E = {
 			isa = PBXGroup;
 			children = (
+				1335087B1743D79A009B682E /* MBWebSocketServer */,
 				1335084D1743D785009B682E /* OCWebSocketServer */,
 				1335086A1743D785009B682E /* OCWebSocketServerTests */,
 				133508461743D785009B682E /* Frameworks */,
@@ -94,6 +109,7 @@
 		133508461743D785009B682E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				133508871743D7CF009B682E /* Security.framework */,
 				133508471743D785009B682E /* Cocoa.framework */,
 				133508651743D785009B682E /* SenTestingKit.framework */,
 				133508491743D785009B682E /* Other Frameworks */,
@@ -151,6 +167,18 @@
 				1335086D1743D785009B682E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1335087B1743D79A009B682E /* MBWebSocketServer */ = {
+			isa = PBXGroup;
+			children = (
+				1335087C1743D79A009B682E /* GCDAsyncSocket.h */,
+				1335087D1743D79A009B682E /* GCDAsyncSocket.m */,
+				1335087E1743D79A009B682E /* MBWebSocketServer.h */,
+				1335087F1743D79A009B682E /* MBWebSocketServer.m */,
+				133508801743D79A009B682E /* README.md */,
+			);
+			path = MBWebSocketServer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +255,7 @@
 				133508521743D785009B682E /* InfoPlist.strings in Resources */,
 				133508581743D785009B682E /* Credits.rtf in Resources */,
 				1335085E1743D785009B682E /* MainMenu.xib in Resources */,
+				133508851743D79A009B682E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1335086F1743D785009B682E /* InfoPlist.strings in Resources */,
+				133508861743D79A009B682E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +293,8 @@
 			files = (
 				133508541743D785009B682E /* main.m in Sources */,
 				1335085B1743D785009B682E /* AppDelegate.m in Sources */,
+				133508811743D79A009B682E /* GCDAsyncSocket.m in Sources */,
+				133508831743D79A009B682E /* MBWebSocketServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				133508721743D785009B682E /* OCWebSocketServerTests.m in Sources */,
+				133508821743D79A009B682E /* GCDAsyncSocket.m in Sources */,
+				133508841743D79A009B682E /* MBWebSocketServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

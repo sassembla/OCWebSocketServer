@@ -8,11 +8,28 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
+
+@implementation AppDelegate {
+    MBWebSocketServer * serv;
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    serv = [[MBWebSocketServer alloc]initWithPort:8824 delegate:self];
+}
+
+- (void)webSocketServer:(MBWebSocketServer *)webSocketServer didAcceptConnection:(GCDAsyncSocket *)connection {
+    
+}
+- (void)webSocketServer:(MBWebSocketServer *)webSocketServer clientDisconnected:(GCDAsyncSocket *)connection {
+    
+}
+- (void)webSocketServer:(MBWebSocketServer *)webSocket didReceiveData:(NSData *)data fromConnection:(GCDAsyncSocket *)connection {
+}
+
+- (void)webSocketServer:(MBWebSocketServer *)webSocketServer couldNotParseRawData:(NSData *)rawData fromConnection:(GCDAsyncSocket *)connection error:(NSError *)error {
+    
 }
 
 @end
+
